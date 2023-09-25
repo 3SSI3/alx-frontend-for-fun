@@ -1,0 +1,22 @@
+/*hiding the underline by default*/
+h2 a {
+    text-decoration: none;
+    color:  #800000;
+    position: relative;
+}
+
+/* Creating the underline element */
+h2 a::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease; /* transition effect */
+}
+
+/**Show the underline when hovering over the link**/
+a:hover::before {
+    background-color: #800000;
+    width: 100%;
+}
